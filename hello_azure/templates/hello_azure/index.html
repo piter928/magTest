@@ -1,32 +1,85 @@
-{% load static %}
-<!doctype html>
-<head>
-    <title>Hello Azure - Python Quickstart</title>
-    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
-    <link rel="icon"href="{% static 'favicon.ico' %}">
-</head>
+<!DOCTYPE html>
 <html>
-   <body>
-     <main>
-        <div class="px-4 py-3 my-2 text-center">
-            <img class="d-block mx-auto mb-4" src="{% static 'images/azure-icon.svg' %}" alt="Azure Logo" width="192" height="192"/>
-            <!-- <img  src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
-            <h1 class="display-6 fw-bold text-primary">Welcome to DUPSKO</h1>            
-          </div>
-        <form method="post" action="hello">
-            {% csrf_token %}
-            <div class="col-md-6 mx-auto text-center">
-                <label for="name" class="form-label fw-bold fs-5">Please tell me your name?</label>
-
-                <!-- <p class="lead mb-2">Could you please tell me your name?</p> -->
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
-                    <input type="text" class="form-control" id="name" name="name" style="max-width: 256px;">
-                  </div>            
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2">
-                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Say Hello</button>
-                </div>            
+<head>
+    <title>Matthis pretium forecasting</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="topbar.css">
+    <link rel="stylesheet" href="bottombar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="Pasek_opcji">
+            <span class="Dane_uzytkownika">Dane użytkownika</span>
+            <span id="Rejestracja">
+                <img id="Rejestracja_napis" src="Rejestracja.png" alt="Rejestracja">
+              </span>
+            <div id="login-form" class="closed">
+                <div class="form-row">
+                    <label for="username">Login:</label>
+                    <input type="text" id="username" placeholder="">
+                </div>
+                <div class="form-row">
+                    <label for="password">Hasło:</label>
+                    <input type="password" id="password" placeholder="">
+                </div>
+                <div class="form-row">
+                    <div class="form-actions">
+                        <button id="login-button">Zaloguj</button>
+                    </div>
+                </div>
             </div>
-        </form>
-     </main>      
-   </body>
+            
+            <div class="options">
+                <div class="flags">
+                  <div id="flag1" class="flag-item" data-image="Palac.jpg">
+                    <img src="PL_flag.svg.png" alt="Flag 1">
+                  </div>
+                  <div id="flag2" class="flag-item" data-image="BigBen.jpg">
+                    <img src="UK_flag.png" alt="Flag 2">
+                  </div>
+                  <div id="flag3" class="flag-item">
+                    <img src="SPQR_flag.png" alt="Flag 3">
+                  </div>
+                </div>
+              </div>
+        </div>
+    </header>
+    <section>
+        <div class="title">Prognozowanie</div>
+        
+    </section>
+    <section>
+        <div class="Prognozowanie-obszar">
+            <div class="wrapper">
+              <div class="powierzchnia-tekst tekst">Powierzchnia:</div>
+              <input type="number" class="powierzchnia-input input" placeholder="Wpisz liczbę" />
+            </div>
+            <div class="wrapper">
+              <div class="pokoje-tekst tekst">Pokoje:</div>
+              <input type="number" class="pokoje-input input" placeholder="Wpisz liczbę" />
+            </div>
+            <div class="prostokatne-pole">
+              <h1 class="prognozowana-cena">Prognozowana cena</h1>
+            </div>
+          </div>
+        <img id="zdjecie-prawo" src="Palac.jpg" alt="Zdjęcie-prawo" class="palac-image" >
+    </section>
+    <footer>
+        <div class="Pasek_dolny">
+            <div class="Pasek_dolny_lewy">
+                <span class="Wersja_programu">Wersja programu: Beta 0.98.3</span>
+            </div>
+            <div class="Pasek_dolny_prawy">
+                <span class="Autorzy">Autorzy: Jakub Kołodziej i Piotr Wieczorek</span>
+            </div>
+        </div>
+    </footer>
+    <script src="/usr/share/javascript/jquery/jquery.min.js"></script>
+    <audio id="background-music" loop>
+      <source src="divinitus.mp3" type="audio/mpeg">
+    </audio>
+</body>
 </html>
